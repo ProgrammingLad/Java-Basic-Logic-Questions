@@ -41,6 +41,28 @@ public class Question18SwapArrayValues {
 		for(Integer number: oddNumbers) {
 			System.out.println(number);
 		}
+		
+		System.out.println("\n");
+		
+		String[] names1 = {"Eugene", "Symone", "Reyes"};
+		String[] names2 = {"Eidel", "Weiss", "Gascon"};
+		
+		String[] names3 = new String[names1.length];
+		
+		for(int i = 0; i < names1.length; i++) {
+			names3[i] = names2[i];
+			
+			names2[i] = names1[i];
+			System.out.println("Names 2: " + names2[i]);
+		}
+		
+		System.out.println();
+		
+		for(int i = 0; i < names3.length; i++) {
+			names1[i] = names3[i];
+			
+			System.out.println("Names 1: " + names1[i]);
+		}
 	}
 
 }
