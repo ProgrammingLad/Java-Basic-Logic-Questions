@@ -25,48 +25,49 @@ public class Question16ArrayReplaceIndex {
 
 		Scanner scanner = new Scanner(System.in);
 
-		
-		List<Integer> numbers = new ArrayList<>(List.of(7, 2, 98, 48, 27, 34, 100, 48));
-			
-		System.out.println("Going through old array: ");
+		int[] array = { 7, 2, 98, 48, 27, 34, 100, 48 };
 
-		for (Integer number : numbers) {
-			System.out.printf("%d ", number);
-		}
+		Integer intObj = 0;
 
-		System.out.println("\n");
+		List<Integer> numbers = new ArrayList<>();
 
-		
-		
-		//First number
-		System.out.println("First number you would like to replace? ");
-		int userInput = scanner.nextInt();
-		int value = userInput;
-		
-		System.out.println("Second number you would like to replace? ");
-		int userInput2 = scanner.nextInt();
-		int value2 = userInput2;
-		
-		ListIterator<Integer> it = numbers.listIterator();
-		
-		while (it.hasNext()) {
+		System.out.println("Now displaying array list: ");
 
-			if ((int) it.next() == userInput) {
-				it.set(value2);
-			}
-			
-			if ((int) it.next() == userInput2) {
-				it.set(value);
-			}
+		for (int number : array) {
+			intObj = number;
+
+			numbers.add(intObj);
+
+			System.out.println(number);
 		}
 
 		System.out.println();
-		System.out.println("Going through new array: ");
 
-		for (Integer number : numbers) {
-			System.out.printf("%d ", number);
+		System.out.println("Please enter number to replace: ");
+		int userInput = scanner.nextInt();
+
+		System.out.println("Please enter second number to replace: ");
+		int userInput2 = scanner.nextInt();
+
+		ListIterator<Integer> it = numbers.listIterator();
+
+		while (it.hasNext()) {
+			Integer it2 = it.next();
+
+			if (it2 == userInput) {
+				it.set(userInput2);
+			}
+
+			if (it2 == userInput2) {
+				it.set(userInput);
+			}
+
 		}
 
-		scanner.close();
+		System.out.println("Now displaying updated list with replacement: \n");
+		for (Integer number : numbers) {
+			System.out.println(number);
+		}
+
 	}
 }
