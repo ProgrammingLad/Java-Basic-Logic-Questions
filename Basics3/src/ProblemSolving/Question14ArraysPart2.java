@@ -16,29 +16,23 @@ public class Question14ArraysPart2 {
 
 	public static void main(String[] args) {
 
-		// First way of doing it
+		int[] array = { 1, 6, 2, 8, 5 };
 
-		List<Integer> arrayList = new ArrayList<>(List.of(1, 9, 18, 16, 81, 64, 37, 419, 48, 891));
+		Integer intObj = 0;
 
-		Collections.sort(arrayList);
+		List<Integer> numbers = new ArrayList<>();
 
-		System.out.println("Arrays are now sorted from least to greatest value\n");
+		for (int number : array) {
 
-		System.out.println("Now going through values of first array....");
+			intObj = (number);
 
-		for (Integer number : arrayList) {
-
-			System.out.print(number + " ");
+			numbers.add(intObj);
 		}
 
-		System.out.println("\n");
+		Collections.sort(numbers);
 
-		System.out.printf("Size of array: %d \n\n", arrayList.size());
+		System.out.println("Second least value is: " + numbers.get(1));
+		System.out.println("Second largest value is: " + numbers.get(3));
 
-		System.out.println("Second smallest value inside array: " + arrayList.get(1));
-		System.out.println("Second largest value inside array: " + arrayList.get(8));
-
-		System.out.println("\n");
-		
 	}
 }
