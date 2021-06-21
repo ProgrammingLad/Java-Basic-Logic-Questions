@@ -19,22 +19,29 @@ public class Question15ArrayInput {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-
+		
 		System.out.println("Please enter a number: ");
 		int userInput = scanner.nextInt();
-
-		ArrayList<Integer> numbers = new ArrayList<>(List.of(8, 9, 1, 3, 4, 8, 6, 4, 16, 8));
-
-		System.out.println("Output: ");
-
+		
+		int[] array = {8, 9, 1, 3, 4, 8, 6, 4, 16, 8};
+		
+		Integer intObj = 0;
+		
+		List<Integer> numbers = new ArrayList<>();
+		
+		for(int number: array) {
+			
+			intObj = number;
+			
+			numbers.add(intObj);
+		}
+		
 		for(int i = 0; i < numbers.size(); i++) {
-		    if(numbers.get(i) == userInput)
-		        System.out.println(i);
-		 }
+			if(numbers.get(i) == userInput) {
+				System.out.println("Index of number inside array: " + i);
+			}
+		}
 		
 		scanner.close();
-
-		System.out.println();
-		System.out.printf("Desired output: \nFirst index of 8: %d\nSecond index of 8: %d\nThird index of 8: %d ", 0, 5, 9);
 	}
 }
