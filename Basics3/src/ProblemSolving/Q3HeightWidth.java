@@ -18,16 +18,25 @@ public class Q3HeightWidth {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Please enter height: ");
-		int heightInput = scanner.nextInt();
+		System.out.println("Height: ");
+		int userInput = scanner.nextInt();
+
+		if(userInput == 0) {
+			System.out.println("Error, you cant type 0.");
+			System.exit(0);
+		}
 		
-		System.out.println("Please enter box width: ");
-		int widthInput = scanner.nextInt();
+		System.out.println("Width: ");
+		int userInput2 = scanner.nextInt();
 		
+		if(userInput2 == 0) {
+			System.out.println("Error, you cant type 0.");
+			System.exit(0);
+		}
 		
-		for(int i = 0; i < heightInput; i++) {
+		for(int i = 0; i < userInput; i++) {
 			System.out.print("B");
-			for(int j = 0; j < widthInput; j++) {
+			for(int j = 1; j < userInput2; j++) {
 				System.out.print("B");
 			}
 			System.out.println();
