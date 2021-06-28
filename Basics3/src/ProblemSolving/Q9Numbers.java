@@ -14,18 +14,16 @@ import java.util.Scanner;
 public class Q9Numbers {
 
 	public static void main(String[] args) {
-		
+
 		Scanner scanner = new Scanner(System.in);
-		
-		System.out.println("Please enter a number: ");
-		
-		String userInput = scanner.nextLine();
-		@SuppressWarnings("unused")
-		int numberOfWords = Integer.parseInt(userInput);
-		
-		
-		System.out.println(userInput.length());
-		
+
+		int userInput = scanner.nextInt();
+
+		String convert = Integer.toString(userInput);
+
+		System.out.println(convert.length());
+
 		scanner.close();
+
 	}
 }
